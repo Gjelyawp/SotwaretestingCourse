@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aacbe9de-49d8-4db2-b051-26904e674dd4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task2/Task2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task2/src/tsksecond/Points.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task2/src/tsksecond/Task2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sandbox/out/production/classes/task/pkg/Rectangle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sandbox/out/production/classes/task/pkg/Square.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sandbox/out/production/classes/task/pkg/task1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sandbox/src/main/java/task/pkg/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sandbox/src/main/java/task/pkg/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sandbox/src/main/java/task/pkg/task1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sandbox/src/main/java/task1.java" beforeDir="false" />
-    </list>
+    <list default="true" id="aacbe9de-49d8-4db2-b051-26904e674dd4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
