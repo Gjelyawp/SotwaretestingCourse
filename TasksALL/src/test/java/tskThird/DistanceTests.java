@@ -1,8 +1,9 @@
-package tsksecond;
+package tskThird;
 
 import org.apache.commons.math3.util.Precision;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 
 public class DistanceTests {
@@ -18,7 +19,7 @@ public class DistanceTests {
 		} catch (AssertionError error) {
 			System.out.println("Расстояние между точками вычислено неверно D=" + d.Distance() + " " + "Правильное D=" + exResult);
 		}
-
+		//С округлением
 		double exResult2 = 1.41;
 		double d2 = Precision.round(d.Distance(),2);
 		try {
