@@ -1,5 +1,9 @@
 package tsksecond;
 
+import org.apache.commons.math3.util.Precision;
+
+import java.text.DecimalFormat;
+
 public class Points {
 	public double x1,y1,x2,y2;
 
@@ -10,7 +14,8 @@ public class Points {
 		this.y2 = y2;
 	}
 		public double Distance (){
-		double d= Math.sqrt(Math.pow((this.x1-this.x2),2)+ Math.pow((this.y1-this.y2),2));
+			DecimalFormat df = new DecimalFormat("#.00");
+		double d= (Math.sqrt(Math.pow((this.x1-this.x2),2)+ Math.pow((this.y1-this.y2),2)));
 		return d;
 	}
 	
