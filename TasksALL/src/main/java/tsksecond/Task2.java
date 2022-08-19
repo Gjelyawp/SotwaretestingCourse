@@ -13,9 +13,10 @@ public class Task2 {
 		double x2 = in.nextDouble();
 		System.out.println("Введите у2=");
 		double y2 = in.nextDouble();
-		Points p = new Points(x1,y1,x2,y2);
-		System.out.println("Точка A("+p.x1+","+p.y1+")");
-		System.out.println("Точка B("+p.x2+","+p.y2+")");
-		System.out.println("Расстояние между точками А и B "+ " D="+ p.Distance());
+		Points p1 = new Points(x1,y1);
+		Points p2 = new Points(x2,y2);
+		System.out.println("Точка A(" + x1 + ","+ x2 + ")");
+		System.out.println("Точка B("+ x2 + "," + y2 + ")");
+		System.out.println("Расстояние между точками А и B "+ " D="+ p2.Distance(p1));
 	}
 }
