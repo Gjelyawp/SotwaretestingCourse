@@ -2,12 +2,20 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="adressbook-web-tests" target="1.8" />
+      <module name="adressbook-web-tests.main" target="1.8" />
+      <module name="adressbook-web-tests.test" target="1.8" />
+      <module name="org.example.addressbook-web-tests.main" target="1.8" />
+      <module name="org.example.addressbook-web-tests.test" target="1.8" />
       <module name="Task3" target="1.8" />
       <module name="task3" target="1.8" />
       <module name="task3.main" target="1.8" />
       <module name="Task3.main" target="1.8" />
-      <module name="Task3.test" target="1.8" />
       <module name="task3.test" target="1.8" />
+      <module name="Task3.test" target="1.8" />
+      <module name="testtest" target="1.8" />
+      <module name="testtest_main" target="1.8" />
+      <module name="testtest_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
