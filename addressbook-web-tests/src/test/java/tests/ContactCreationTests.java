@@ -1,7 +1,8 @@
-package address.book;
+package tests;
 
 import java.util.concurrent.TimeUnit;
 
+import model.ContactData;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
