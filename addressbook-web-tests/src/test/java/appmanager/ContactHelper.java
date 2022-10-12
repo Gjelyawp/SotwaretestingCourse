@@ -38,9 +38,6 @@ public class ContactHelper extends HelperBase {
 	click(By.xpath("//input[@value='Delete']"));
 	}
 
-	public void submitContactDeletion()  {
-		assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
-	}
 
 	private String closeAlertAndGetItsText() {
 		try {
@@ -56,5 +53,16 @@ public class ContactHelper extends HelperBase {
 			acceptNextAlert = true;
 		}
 	}
+	public void submitContactDeletion()  {
+		assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
+	}
 
+
+	public void EditFirstContact() {
+		click(By.xpath("//img[@alt='Edit']"));
+	}
+
+	public void confirmModificationContact() {
+		click(By.name("update"));
+	}
 }
