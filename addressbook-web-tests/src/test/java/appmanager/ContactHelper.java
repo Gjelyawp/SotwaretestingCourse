@@ -1,11 +1,15 @@
 package appmanager;
 
 import model.ContactData;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static org.testng.Assert.assertTrue;
+
 public class ContactHelper extends HelperBase {
 	protected WebDriver wd;
+	public boolean acceptNextAlert = true;
 
 	public ContactHelper(WebDriver wd) {
 		super(wd);
@@ -25,4 +29,32 @@ public class ContactHelper extends HelperBase {
 	public void initContactCreation() {
 		click(By.linkText("add new"));
 	}
+
+	public void selectFirstContact() {
+		click(By.id("1"));
+	}
+
+	public void deleteSelectedContact() {
+	click(By.xpath("//input[@value='Delete']"));
+	}
+
+	public void submitContactDeletion()  {
+		assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
+	}
+
+	private String closeAlertAndGetItsText() {
+		try {
+			Alert alert = wd.switchTo().alert();
+			String alertText = alert.getText();
+			if (acceptNextAlert) {
+				alert.accept();
+			} else {
+				alert.dismiss();
+			}
+			return alertText;
+		} finally {
+			acceptNextAlert = true;
+		}
+	}
+
 }
