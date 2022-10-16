@@ -12,6 +12,4 @@ public class ContactModificationTests extends TestBase{
 	app.getContactHelper().confirmModificationContact();
 	app.getNavigationHelper().returnToMainPage();
 	}
-
-
 }

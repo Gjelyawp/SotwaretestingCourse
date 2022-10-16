@@ -14,16 +14,17 @@ public class ContactHelper extends HelperBase {
 	public ContactHelper(WebDriver wd) {
 		super(wd);
 	}
+
 	public void submitContactCreation() {
 		click(By.xpath("//div[@id='content']/form/input[21]"));
 	}
 
 	public void fillContactForm(ContactData contactData) {
-		type(By.name("firstname"),contactData.getFirstname());
-		type(By.name("lastname"),contactData.getLastname());
-		type(By.name("mobile"),contactData.getMobPhone());
-		type(By.name("address"),contactData.getAdress());
-		type(By.name("email"),contactData.getEmail());
+		type(By.name("firstname"), contactData.getFirstname());
+		type(By.name("lastname"), contactData.getLastname());
+		type(By.name("mobile"), contactData.getMobPhone());
+		type(By.name("address"), contactData.getAdress());
+		type(By.name("email"), contactData.getEmail());
 	}
 
 	public void initContactCreation() {
@@ -31,11 +32,11 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public void selectFirstContact() {
-		click(By.id("1"));
+		click(By.xpath("//input[@type='checkbox']"));
 	}
-
+	public void selectAllContacts(){click(By.xpath("//input[@type='checkbox'and @id='MassCB']"));	}
 	public void deleteSelectedContact() {
-	click(By.xpath("//input[@value='Delete']"));
+		click(By.xpath("//input[@value='Delete']"));
 	}
 
 
@@ -53,7 +54,8 @@ public class ContactHelper extends HelperBase {
 			acceptNextAlert = true;
 		}
 	}
-	public void submitContactDeletion()  {
+
+	public void submitContactDeletion() {
 		assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
 	}
 
