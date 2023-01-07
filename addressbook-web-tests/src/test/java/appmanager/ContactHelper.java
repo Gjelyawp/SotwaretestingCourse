@@ -21,7 +21,7 @@ public class ContactHelper extends HelperBase {
 		click(By.xpath("//div[@id='content']/form/input[21]"));
 	}
 
-	public void fillContactForm(ContactData contactData, boolean creation) {
+	public void fillContactFormWithCheckGroup(ContactData contactData, boolean creation) {
 		type(By.name("firstname"), contactData.getFirstname());
 		type(By.name("lastname"), contactData.getLastname());
 		type(By.name("mobile"), contactData.getMobPhone());
@@ -78,5 +78,30 @@ public class ContactHelper extends HelperBase {
 
 	public void confirmModificationContact() {
 		click(By.name("update"));
+	}
+
+	private void returnToMainPage() {
+		click(By.linkText("home page"));
+
+	}
+	public void fillContactForm(ContactData contactData) {
+		type(By.name("firstname"), contactData.getFirstname());
+		type(By.name("lastname"), contactData.getLastname());
+		type(By.name("mobile"), contactData.getMobPhone());
+		type(By.name("address"), contactData.getAdress());
+		type(By.name("email"), contactData.getEmail());
+	}
+
+	public void createContact(ContactData contactDat) {
+		initContactCreation();
+		fillContactForm(contactDat);
+		submitContactCreation();
+		returnToMainPage();
+
+	}
+
+
+	public boolean isContactCreated() {
+		return isElementPresent(By.name("selected[]"));
 	}
 }
