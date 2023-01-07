@@ -1,9 +1,11 @@
 package appmanager;
 
 import model.ContactData;
+import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import static org.testng.Assert.assertTrue;
 
@@ -19,12 +21,18 @@ public class ContactHelper extends HelperBase {
 		click(By.xpath("//div[@id='content']/form/input[21]"));
 	}
 
-	public void fillContactForm(ContactData contactData) {
+	public void fillContactForm(ContactData contactData, boolean creation) {
 		type(By.name("firstname"), contactData.getFirstname());
 		type(By.name("lastname"), contactData.getLastname());
 		type(By.name("mobile"), contactData.getMobPhone());
 		type(By.name("address"), contactData.getAdress());
 		type(By.name("email"), contactData.getEmail());
+		if (creation){
+			new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+		} else {
+			Assert.assertFalse(isElementPresent(By.name("new_group")));
+		}
+
 	}
 
 	public void initContactCreation() {
@@ -34,7 +42,11 @@ public class ContactHelper extends HelperBase {
 	public void selectFirstContact() {
 		click(By.xpath("//input[@type='checkbox']"));
 	}
-	public void selectAllContacts(){click(By.xpath("//input[@type='checkbox'and @id='MassCB']"));	}
+
+	public void selectAllContacts() {
+		click(By.xpath("//input[@type='checkbox'and @id='MassCB']"));
+	}
+
 	public void deleteSelectedContact() {
 		click(By.xpath("//input[@value='Delete']"));
 	}
